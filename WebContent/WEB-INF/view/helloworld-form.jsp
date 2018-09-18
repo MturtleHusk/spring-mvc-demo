@@ -5,7 +5,7 @@
 </head>
 
 <body>
-	<form action="processForm" Method= "Get">	<!-- action refers to which url to send data when submitted -->
+	<form action="processFormVersionTwo" Method= "Get">	<!-- action refers to which url to send data when submitted -->
 		<input type="text" name= "studentName"
 			placeholder="Whats your name?" />
 			
