@@ -13,5 +13,9 @@ public class HelloWorldController {
 	}
 	
 	// need a controller to process the HTML form
-
+	@RequestMapping("/processForm") // stated in the jsp to send data to this url
+	public String processForm() {
+		return "helloworld";
+		
+	}
 }
