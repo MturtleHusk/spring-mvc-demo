@@ -4,6 +4,8 @@
 <h2> spring MVC demo- Home Page</h2>
 
 <hr>
-<a href = "showForm"> hello world form</a>
+<a href = "hello/showForm"> hello world form</a>
+<hr>
+<a href = "student/showForm"> student form</a>
 </body>
 </html>

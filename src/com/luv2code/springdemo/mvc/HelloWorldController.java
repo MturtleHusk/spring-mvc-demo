@@ -5,8 +5,10 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
+@RequestMapping("/hello") // this acts as a parent, all forms below will be /hello/[the
 public class HelloWorldController {
 	
 	// need a controller to show initial form
@@ -32,6 +34,21 @@ public class HelloWorldController {
 		theName = theName.toUpperCase();
 		// create message
 		String result = "Yo!" + theName;
+		
+		// add message to model
+		model.addAttribute("message", result);
+		return "helloworld";
+	}
+	
+	@RequestMapping("/processFormVersionThree")
+	public String processFormVersionThree(
+			@RequestParam("studentName") String theName, 
+			Model model) {	
+	
+		// convert to all caps
+		theName = theName.toUpperCase();
+		// create message
+		String result = "Howdy" + theName;
 		
 		// add message to model
 		model.addAttribute("message", result);
